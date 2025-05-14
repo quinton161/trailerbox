@@ -5,7 +5,7 @@ import "./footer.scss";
 import { Link } from "react-router-dom";
 
 import bg from "./../../assets/footer-bg.jpg";
-import logo from "./../../assets/logo.png";
+import logo from "../../assets/logo.jpeg";
 
 import * as Config from "./../../constants/Config";
 
@@ -15,8 +15,20 @@ const Footer = () => {
       <div className="footer__content container">
         <div className="footer__content__logo">
           <div className="logo">
-            <img src={logo} alt="logo" />
-            <Link to={`/${Config.HOME_PAGE}`}>hMovies</Link>
+            <img 
+              src={logo} 
+              alt="Trailer Box Logo" 
+              style={{ 
+                objectFit: 'contain',
+                backgroundColor: 'transparent',
+                mixBlendMode: 'lighten',
+                filter: 'brightness(3) contrast(1.5) saturate(1.3)',
+                opacity: 0.9,
+                padding: '2px',
+                maxWidth: '150px'
+              }} 
+            />
+            <Link to={`/${Config.HOME_PAGE}`}>Trailer Box</Link>
           </div>
         </div>
 
